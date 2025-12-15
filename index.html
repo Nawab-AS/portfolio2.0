@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <ul id="header">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div id="app">
+        <section id="about">
+            <h1>About Me</h1>
+            <p>{{ data.about }}</p>
+        </section>
+
+        <section id="projects">
+            <h1>Projects</h1>
+            <ul>
+                <li v-for="project in data.projects" :key="project.id">
+                    <h2>{{ project.title }}</h2>
+                    <p>{{ project.description }}</p>
+                    <img :src="project.image" alt="">
+                    <a :href="project.link">Project Link</a>
+                    <a :href="project.github">GitHub</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Email: {{ data.contact.email }}</p>
+        </section>
+    </div>
+</body>
+</html>
