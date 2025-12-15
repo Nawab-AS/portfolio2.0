@@ -1,7 +1,7 @@
 const { createApp, ref } = Vue;
 
 const data = ref({
-    about: 'Hello, I am Hamid',
+    pfp: "https://avatars.githubusercontent.com/u/59747708",
 
     projects: [
         {
@@ -33,4 +33,3 @@ createApp({
         }
     }
 }).mount('body');
-

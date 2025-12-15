@@ -10,33 +10,45 @@
 </head>
 <body v-cloak>
     <div id="header">
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <div id="app">
-        <section id="about">
-            <h1>About Me</h1>
-            <p>{{ data.about }}</p>
-        </section>
+        <div id="me">
+            <img :src="data.pfp" alt="">
+            <h2><a href="#">Nawab-AS</a></h2>
+        </div>
 
-        <section id="projects">
-            <h1>Projects</h1>
-            <ul>
-                <li v-for="project in data.projects" :key="project.id">
-                    <h2>{{ project.title }}</h2>
-                    <p>{{ project.description }}</p>
-                    <img :src="project.image" alt="">
-                    <a :href="project.link">Project Link</a>
-                    <a :href="project.github">GitHub</a>
-                </li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h1>Contact</h1>
-            <p>Email: {{ data.contact.email }}</p>
-        </section>
+        <div id="navbar">
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
+
+
+    <section id="intro">
+        <h1>Hi, I'm Hamid</h1>
+        <p>{{ data.tagline }}</p>
+    </section>
+
+    <section id="aboutMe">
+        <h1>About Me</h1>
+        <p>{{ data.about }}</p>
+    </section>
+
+    <section id="projects">
+        <h1>Projects</h1>
+        <ul>
+            <li v-for="project in data.projects" :key="project.id">
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+                <img :src="project.image" alt="">
+                <a :href="project.link">Project Link</a>
+                <a :href="project.github">GitHub</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>Email: {{ data.contact.email }}</p>
+    </section>
 </body>
 </html>
