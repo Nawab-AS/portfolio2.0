@@ -11,7 +11,7 @@ body {
     color: #ccc;
 }
 
-span {
+p>span {
     text-decoration: line-through;
 }
 
@@ -91,7 +91,7 @@ span {
 /* sections */
 
 section {
-    height: 90vh;
+    min-height: 90vh;
     padding: 5vw 5vh;
     scroll-margin-top: 60px;
 }
@@ -106,6 +106,7 @@ section#intro {
     height: calc(90vh - 60px);
     padding: 5vw 5vh;
 }
+
 
 #pfpArt {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', Courier, monospace;
@@ -137,4 +138,93 @@ section#about p {
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
+}
+
+/* projects section */
+
+section#projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section#projects li {
+    background: #333;
+    border-radius: 16px;
+    padding: 28px 22px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition-duration: 0.2s;
+    border: 1px solid #333;
+}
+
+section#projects li:hover {
+    transform: translateY(-6px) scale(1.025);
+    border-color: #ffd700;
+}
+
+section#projects h2 {
+    margin: 0 0 10px 0;
+    color: #ffd700;
+    font-size: 1.3rem;
+}
+
+section#projects p {
+    margin: 0 0 16px 0;
+    color: #ccc;
+    font-size: 1.05rem;
+}
+
+section#projects img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    margin: 0 0 16px 0;
+    object-fit: cover;
+    align-self: center;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.project-btn {
+    display: inline-block;
+    background: #ffd700;
+    color: #232323;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.project-btn:hover {
+    background: #ffe066;
+    color: #111;
+    outline: none;
+}
+
+.badge-wip {
+    display: inline-block;
+    background: #ff5252;
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 4px 14px;
+    margin-left: 6px;
+    vertical-align: middle;
 }

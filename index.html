@@ -27,7 +27,7 @@
         <div>
             <h1>Hi there,</h1>
             <h1>I'm Hamid Syed</h1>
-            <h3>(also known as Nawab-AS)</h3>
+            <h3>(also known as <a :href="'https://github.com/' + data.contact.github">Nawab-AS</a>)</h3>
             <p>{{ data.tagline }}</p>
         </div>
 
@@ -42,6 +42,7 @@
             I'm a grade 12 IB student from Ontario, Canada with a passion for programming.
             I love creating full-stack websites that solve <span>my</span> real-world problems and help people.
             As of now, exploring more fields in computer science such as cybersecurity and embedded systems.
+            I am proficient in multiple languages such as JavaScript (full-stack), Python, HTML, and CSS, Rust(learning).
         </p>
     </section>
 
@@ -52,8 +53,11 @@
                 <h2>{{ project.title }}</h2>
                 <p>{{ project.description }}</p>
                 <img :src="project.image" alt="">
-                <a :href="project.link">Project Link</a>
-                <a :href="project.github">GitHub</a>
+                <div class="project-links">
+                    <a :href="project.link" class="project-btn" target="_blank">Demo</a>
+                    <a :href="project.github" class="project-btn" target="_blank">GitHub</a>
+                    <span v-if="project.WIP" class="badge-wip">Work in progress</span>
+                </div>
             </li>
         </ul>
     </section>
@@ -61,6 +65,7 @@
     <section id="contact" style="height: min-content;">
         <h1>Contact</h1>
         <p>Email: <a :href="'mailto:' + data.contact.email">{{ data.contact.email }}</a></p>
+        <p>Github: <a :href="'https://github.com/' + data.contact.github">{{ data.contact.github }}</a></p>
     </section>
 </body>
 </html>
