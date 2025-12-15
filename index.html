@@ -12,7 +12,7 @@
     <div id="header">
         <div id="me">
             <img :src="data.pfp" alt="">
-            <h2><a href="#">Nawab-AS</a></h2>
+            <h2><a href="#intro">Nawab-AS</a></h2>
         </div>
 
         <div id="navbar">
@@ -24,11 +24,21 @@
 
 
     <section id="intro">
-        <h1>Hi, I'm Hamid</h1>
-        <p>{{ data.tagline }}</p>
+        <div>
+            <div>
+                <h1>Hi there,</h1>
+                <h1>I'm Hamid Syed</h1>
+                <h3>(also known as Nawab-AS)</h3>
+                <p>{{ data.tagline }}</p>
+            </div>
+
+            <div>
+                <p id="pfpArt">{{ pfpArt }}</p>
+            </div>
+        </div>
     </section>
 
-    <section id="aboutMe">
+    <section id="about">
         <h1>About Me</h1>
         <p>{{ data.about }}</p>
     </section>
@@ -46,7 +56,7 @@
         </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" style="height: min-content;">
         <h1>Contact</h1>
         <p>Email: {{ data.contact.email }}</p>
     </section>

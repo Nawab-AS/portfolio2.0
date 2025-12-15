@@ -25,11 +25,24 @@ const data = ref({
     }
 });
 
+const pfpArt = ref('');
+
+fetch('./pfpArt.txt')
+    .then(response => response.text())
+    .then(async (text) => {
+        for (let i = 0; i < text.length; i++) {
+            setTimeout(() => {
+                pfpArt.value += text[i];
+            }, i);
+        }
+    });
+
 
 createApp({
     setup() {
         return {
-            data
+            data,
+            pfpArt
         }
     }
 }).mount('body');
