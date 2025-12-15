@@ -25,22 +25,24 @@
 
     <section id="intro">
         <div>
-            <div>
-                <h1>Hi there,</h1>
-                <h1>I'm Hamid Syed</h1>
-                <h3>(also known as Nawab-AS)</h3>
-                <p>{{ data.tagline }}</p>
-            </div>
+            <h1>Hi there,</h1>
+            <h1>I'm Hamid Syed</h1>
+            <h3>(also known as Nawab-AS)</h3>
+            <p>{{ data.tagline }}</p>
+        </div>
 
-            <div>
-                <p id="pfpArt">{{ pfpArt }}</p>
-            </div>
+        <div>
+            <p id="pfpArt">{{ pfpArt }}</p>
         </div>
     </section>
 
     <section id="about">
         <h1>About Me</h1>
-        <p>{{ data.about }}</p>
+        <p>
+            I'm a grade 12 IB student from Ontario, Canada with a passion for programming.
+            I love creating full-stack websites that solve <span>my</span> real-world problems and help people.
+            As of now, exploring more fields in computer science such as cybersecurity and embedded systems.
+        </p>
     </section>
 
     <section id="projects">
@@ -58,7 +60,7 @@
 
     <section id="contact" style="height: min-content;">
         <h1>Contact</h1>
-        <p>Email: {{ data.contact.email }}</p>
+        <p>Email: <a :href="'mailto:' + data.contact.email">{{ data.contact.email }}</a></p>
     </section>
 </body>
 </html>

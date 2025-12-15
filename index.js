@@ -3,6 +3,8 @@ const { createApp, ref } = Vue;
 const data = ref({
     pfp: "https://avatars.githubusercontent.com/u/59747708",
 
+    tagline: "I like to make stuff",
+
     projects: [
         {
             title: "Project One",
@@ -21,7 +23,7 @@ const data = ref({
     ],
 
     contact: {
-        email: "hello@example.com"
+        email: "support@nawab-as.software"
     }
 });
 

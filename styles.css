@@ -11,6 +11,10 @@ body {
     color: #ccc;
 }
 
+span {
+    text-decoration: line-through;
+}
+
 /* navbar */
 #header {
     display: flex;
@@ -87,24 +91,20 @@ body {
 /* sections */
 
 section {
-    height: 100vh;
-    scroll-margin-top: 70px;
+    height: 90vh;
+    padding: 5vw 5vh;
+    scroll-margin-top: 60px;
 }
 
+/* intro section */
 section#intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px);
-}
-
-section#intro>div {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 90%;
-    width: 90%;
+
+    height: calc(90vh - 60px);
+    padding: 5vw 5vh;
 }
 
 #pfpArt {
@@ -117,4 +117,24 @@ section#intro>div {
     max-width: 420px;
     margin: 0 auto;
     display: block;
+}
+
+/* about section */
+
+section#about {
+    background-color: #2a2a2a;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#about h1 {
+    margin-bottom: 50px;
+}
+
+section#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
 }
