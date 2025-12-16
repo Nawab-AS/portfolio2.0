@@ -40,7 +40,8 @@ const data = ref({
     ],
 
     contact: {
-        email: "support@nawab-as.software"
+        email: "support@nawab-as.software",
+        github: "Nawab-AS"
     }
 });
 
