@@ -7,35 +7,46 @@ const data = ref({
 
     projects: [
         {
-            title: "Project One",
-            description: "Description for project one.",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDn24iCR7VE2le8OTW2jZ6pZW9NNMemSyeFQ&s",
-            link: "https://example.com/project-one",
-            github: "https://github.com/example/project-one"
+            title: "Note Taker",
+            description: "An AI-powered note taker that transcribes meeting/class lectures into proper notes",
+            image: "./images/note-taker.png",
+            link: "https://note-taker.nawab-as.software",
+            github: "https://github.com/Nawab-AS/note-taker"
         },
         {
-            title: "Project two",
+            title: "Potion Brewer",
             description: "Description for project two.",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDn24iCR7VE2le8OTW2jZ6pZW9NNMemSyeFQ&s",
-            link: "https://example.com/project-two",
-            github: "https://github.com/example/project-two",
-            WIP: true
+            image: "./images/potion-brewer.png",
+            link: "https://nawab-as.github.io/potion-brewer",
+            github: "https://github.com/Nawab-AS/potion-brewer",
         },
         {
-            title: "Project three",
-            description: "Description for project three.",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDn24iCR7VE2le8OTW2jZ6pZW9NNMemSyeFQ&s",
-            link: "https://example.com/project-three",
-            github: "https://github.com/example/project-three",
-            WIP: true
+            title: "Anonymous Chat",
+            description: "An anonymous chat app where all messages are encrypted across clients using my own implementation of the ECC key exchange",
+            image: "./images/anonymous-chat.png",
+            link: "https://seige-anonymous-chat-9a876f0fd2ae.herokuapp.com",
+            github: "https://github.com/Nawab-AS/anonymousChat",
         },
         {
-            title: "Project four",
-            description: "Description for project four.",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDn24iCR7VE2le8OTW2jZ6pZW9NNMemSyeFQ&s",
-            link: "https://example.com/project-four",
-            github: "https://github.com/example/project-four",
-            WIP: true
+            title: "Analog to Digital",
+            description: "Create a digital clock from an analog one",
+            image: "./images/analog-to-digital.png",
+            link: "https://nawab-as.software/analogToDigital",
+            github: "https://github.com/Nawab-AS/analogToDigital",
+        },
+        {
+            title: "Mini-Motoyways",
+            description: "A simple clone of Mini Motorways",
+            image: "./images/mini-motorways.png",
+            link: "http://nawab-as.software/mini-motorways",
+            github: "https://github.com/Nawab-AS/mini-motorways",
+        },
+        {
+            title: "Game-OS",
+            description: "A simple clone of Mini Motorways",
+            image: "./images/game-os.png",
+            link: "http://nawab-as.software/game-os",
+            github: "https://github.com/Nawab-AS/game-os",
         }
     ],
 
