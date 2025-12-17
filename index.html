@@ -26,24 +26,19 @@
     <section id="intro">
         <div>
             <h1>Hi there,</h1>
-            <h1>I'm Hamid Syed</h1>
-            <h3>(also known as <a :href="'https://github.com/' + data.contact.github">Nawab-AS</a>)</h3>
-            <p>{{ data.tagline }}</p>
+            <h1>I'm {{ data.name }}</h1>
+            <h3 v-if="data.name != data.contact.github">(also known as <a :href="'https://github.com/' + data.contact.github">{{ data.contact.github }}</a>)</h3>
+            <p v-if="data.tagline">{{ data.tagline }}</p>
         </div>
 
         <div>
-            <p id="pfpArt">{{ pfpArt }}</p>
+            <p v-if="pfpArt" id="pfpArt">{{ pfpArt }}</p>
         </div>
     </section>
 
     <section id="about">
         <h1>About Me</h1>
-        <p>
-            I'm a grade 12 IB student from Ontario, Canada with a passion for programming.
-            I love creating full-stack websites that solve <span>my</span> real-world problems and help people.
-            As of now, exploring more fields in computer science such as cybersecurity and embedded systems.
-            I am proficient in multiple languages such as JavaScript (full-stack), Python, HTML, and CSS, Rust(learning).
-        </p>
+        <p v-html="data.aboutMe"></p>
     </section>
 
     <section id="projects">
